@@ -1,0 +1,56 @@
+%! Author = $USER
+%! Date = $DATE
+
+\documentclass[11pt]{article}
+
+%! packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{multicol, multirow}
+
+% custom commands
+\renewcommand{\mod}{\textbf{~mod~}}
+
+\newcommand{\union}[0]{\cup}
+\newcommand{\intersect}[0]{\cap}
+
+\newcommand{\xor}[0]{\oplus}
+\newcommand{\mul}[0]{\cdot}
+\newcommand{\divides}[0]{~|~}
+
+\newcommand{\st}{~\mid~}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\then}[0]{\to}
+
+\newcommand{\compose}[0]{\circ}
+
+\newcommand{\qed}[0]{\hfill\square}
+
+% custom environments
+\newenvironment{answer}
+    { 
+        \begin{quote} 
+    }
+    { 
+        \end{quote} 
+    }
+    
+\newenvironment{proof}[1][Proof] 
+    { 
+        \emph{#1} 
+    }
+    { 
+        $\qed$ 
+    }
+
+\begin{document}
+
+\hfill{#[[$SUBJECT$]]#}
+\hfill{Manu Bhat}
+\hfill{$DATE}
+
+\begin{enumerate}
+    \item #[[$END$]]#
+
+\end{enumerate}
+
+\end{document}
