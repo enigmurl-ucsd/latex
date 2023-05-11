@@ -1,6 +1,7 @@
 set -e
 for f in 'LaTeX Homework.tex'; do
-	F_PATH=$(find $HOME/Library/Application\ Support/JetBrains/ -name "${f}" -print -quit)
+	# more recent intellij will now show up first
+	F_PATH=$(find $HOME/Library/Application\ Support/JetBrains/ -name "${f}" | sort -r)
 	cp "$F_PATH" .
 done; 
 
