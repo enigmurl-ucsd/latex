@@ -3,29 +3,39 @@
 
 \documentclass[11pt]{article}
 
-%! packages
-\usepackage{amsmath,amssymb,amsfonts}
+% packages
+\usepackage{amsmath, amssymb, amsfonts}
 \usepackage{multicol, multirow}
 
-% custom commands
-\renewcommand{\mod}{\textbf{~mod~}}
+% custom commands %
 
+% modular arithmetic %
+\renewcommand{\mod}[1]{\ (\mathrm{mod}\ #1)}
+
+% set and function theory %
 \newcommand{\union}[0]{\cup}
 \newcommand{\intersect}[0]{\cap}
+\newcommand{\st}{~\mid~}
+\newcommand{\compose}[0]{\circ}
 
+% arithmetic %
 \newcommand{\xor}[0]{\oplus}
 \newcommand{\mul}[0]{\cdot}
-\newcommand{\divides}[0]{~|~}
+\newcommand{\divides}[0]{~\mid~}
+\newcommand{\not\divides}[0]{~\not\mid~}
 
-\newcommand{\st}{~\mid~}
+% logical %
 \renewcommand{\iff}{\leftrightarrow}
 \newcommand{\then}[0]{\to}
 
-\newcommand{\compose}[0]{\circ}
+\DeclareMathOperator{\opif}{if}
+\DeclareMathOperator{\opelif}{else\ if}
+\DeclareMathOperator{\opelse}{else}
 
+% general proofs %
 \newcommand{\qed}[0]{\hfill\square}
 
-% custom environments
+% custom environments %
 \newenvironment{answer}
     { 
         \begin{quote} 
@@ -40,6 +50,16 @@
     }
     { 
         $\qed$ 
+    }
+    
+\newenvironment{piecewise}
+    {
+        \left\{
+        \begin{array}{ll}
+    }
+    {
+        \end{array}
+        \right.
     }
 
 \begin{document}
